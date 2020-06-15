@@ -81,12 +81,12 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 abbr[title],
@@ -500,6 +500,7 @@ mark,
   font-size: 90%;
   color: #6c757d;
 }
+
 
 code {
   font-size: 87.5%;
@@ -1101,7 +1102,6 @@ pre code {
     flex: 0 0 25%;
     max-width: 25%;
   }
-
   .col-md-4 {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
@@ -1312,6 +1312,11 @@ pre code {
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+
+  .col-lg-3-5 {
+    flex: 0 0 27%;
+    max-width: 27%;
   }
 
   .col-lg-4 {
@@ -10103,8 +10108,8 @@ h3 {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
@@ -10132,15 +10137,18 @@ h3 {
   }
 }
 .masthead {
-  padding-top: calc(6rem + 74px);
-  padding-bottom: 6rem;
+  padding-top: calc(5rem + 74px);
+  padding-bottom: 5rem;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
 }
+.masthead .masthead-subbigheading {
+  font-size: 1.9rem;
+}
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 .masthead .masthead-avatar {
   width: 15rem;
@@ -10148,8 +10156,8 @@ h3 {
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
-    padding-bottom: 6rem;
+    padding-top: calc(5rem + 104px);
+    padding-bottom: 5rem;
   }
   .masthead .masthead-heading {
     font-size: 4rem;
@@ -10259,3 +10267,63 @@ form .row:first-child .floating-label-form-group {
 .copyright {
   background-color: #1a252f;
 }
+
+
+.container-raks {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    background: #bb99ff;
+    padding: 20px;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: white;
+    /*background-color: var(--gray);*/
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px gray;
+    text-transform: uppercase;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .add-pad{
+    padding: 40px;
+    padding-left: 80px;
+    padding-top: 60px;
+  }

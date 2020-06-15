@@ -21,7 +21,7 @@
          for(var j=0; j<cities.length;j++){
            var trimmed=cities[j].trim();
           if (!distinct.includes(trimmed)){
-            distinct.push(tri);
+            distinct.push(trimmed);
           }
          }
        }
@@ -29,7 +29,22 @@
        
    var x ="", i;
    for (i=0; i<distinct.length; i++) {
-     x = x + '<div class="col-md-6 col-lg-4 mb-5"><div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1"><div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div><p id=location_list>'+distinct[i]+'</p><img class="img-fluid" src="assets/img/portfolio/game.png" alt="" /></div></div>';
+     x = x +
+     
+     '<div class="col-md-6 col-lg-4 mb-5">'+
+     '<div id="go-to-new-page" class="container-raks">'+
+      '<div class="portfolio-item mx-auto add-pad" data-toggle="modal" data-target="#portfolioModal1">'+
+        '<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">'+
+          '<div class="portfolio-item-caption-content text-center text-white">'+
+            '<i class="fas fa-plus fa-3x"></i>'+
+          '</div>'+
+        '</div>'+
+         '<img class="img-fluid" src="assets/img/portfolio/location.png" alt="" />'+
+         '<div class="top-left">'+ distinct[i]+
+         '</div>'+
+        '</div>'+
+      '</div>'+
+     '</div>';
    }
    document.getElementById("demo").innerHTML = x;
       
