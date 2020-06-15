@@ -3,64 +3,38 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
     */
-// var y;
-//    var request = new XMLHttpRequest();
-//    request.open("GET", "/json/freshersworld.json", false);
-//    request.send(null);
-//    request.onreadystatechange = function() {
-//      if ( request.readyState === 4 && request.status === 200 ) {
-//        var my_JSON_object = JSON.parse(request.responseText);
-//        y=my_JSON_object[0].title;
-//        console.log(y);
-//        var distinct = [];
-//        console.log(my_JSON_object.length);
-//        for (var i = 0; i < my_JSON_object.length; i++){
-//         var a=my_JSON_object[i].location;
-//         var cities=a.split(',');
-//         console.log(a);
-//         console.log(cities);
-//          for(var j=0; j<cities.length;j++){
-//           if (!distinct.includes(cities[j])){
-//             distinct.push(cities);
-//           }
-//          }
-//        }
-//       console.log(distinct);
+var y;
+   var request = new XMLHttpRequest();
+   request.open("GET", "/json/freshersworld.json", false);
+   request.send(null);
+   request.onreadystatechange = function() {
+     if ( request.readyState === 4 && request.status === 200 ) {
+       var my_JSON_object = JSON.parse(request.responseText);
+       y=my_JSON_object[0].title;
+       console.log(y);
+       var distinct = [];
+       console.log(my_JSON_object.length);
+       for (var i = 0; i < my_JSON_object.length; i++){
+        var a=my_JSON_object[i].location;
+        var cities=a.split(',');
+        console.log(a);
+        console.log(cities);
+         for(var j=0; j<cities.length;j++){
+          if (!distinct.includes(cities[j])){
+            distinct.push(cities);
+          }
+         }
+       }
+      console.log(distinct);
        
-//    var x ="", i;
-//    for (i=0; i<distinct.length; i++) {
-//      x = x + '<div class="col-md-6 col-lg-4 mb-5"><div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1"><div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div><p id=location_list>'+distinct[i]+'</p><img class="img-fluid" src="assets/img/portfolio/game.png" alt="" /></div></div>';
-//    }
-//    document.getElementById("demo").innerHTML = x;
+   var x ="", i;
+   for (i=0; i<distinct.length; i++) {
+     x = x + '<div class="col-md-6 col-lg-4 mb-5"><div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1"><div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div><p id=location_list>'+distinct[i]+'</p><img class="img-fluid" src="assets/img/portfolio/game.png" alt="" /></div></div>';
+   }
+   document.getElementById("demo").innerHTML = x;
       
-//      }
-//    }
-var loadFile = function (filePath, done) {
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function () { return done(this.responseText) }
-  xhr.open("GET", filePath, true);
-  xhr.send();
-}
-// paths to all of your files
-var myFiles = [ "/json/freshersworld.json", "/json/myamcat.json", "/json/timesjobs.json"];
-// where you want to store the data
-var jsonData = [];
-// loop through each file
-myFiles.forEach(function (file, i) {
-  // and call loadFile
-  // note how a function is passed as the second parameter
-  // that's the callback function
-  loadFile(file, function (responseText) {
-      // we set jsonData[i] to the parse data since the requests
-      // will not necessarily come in order
-      // so we can't use JSONdata.push(JSON.parse(responseText));
-      // if the order doesn't matter, you can use push
-      jsonData[i] = JSON.parse(responseText);
-      // or you could choose not to store it in an array.
-      // whatever you decide to do with it, it is available as
-      // responseText within this scope (unparsed!)
-  })
-})
+     }
+   }
 
 
    
