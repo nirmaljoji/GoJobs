@@ -3,7 +3,6 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
     */
-var y;
    var request = new XMLHttpRequest();
    request.open("GET", "/json/freshersworld.json", false);
    request.send(null);
@@ -20,8 +19,9 @@ var y;
         console.log(a);
         console.log(cities);
          for(var j=0; j<cities.length;j++){
-          if (!distinct.includes(cities[j])){
-            distinct.push(cities);
+           var trimmed=cities[j].trim();
+          if (!distinct.includes(trimmed)){
+            distinct.push(tri);
           }
          }
        }
@@ -37,10 +37,6 @@ var y;
    }
 
 
-   
-  
-
-  
 
     (function($) {
     "use strict"; // Start of use strict
