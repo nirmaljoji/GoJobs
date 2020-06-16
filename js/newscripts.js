@@ -36,13 +36,15 @@ for (i=0; i<distinct.length; i++) {
  '<div class="col-md-4">'+
  '<a href="#">'+
  '<div class="card">'+
-   '<div class="card-image" style="background-image:url(https://images.pexels.com/photos/475016/pexels-photo-475016.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)"></div>'+
-   '<div class="card-skew">'+
-   '</div>'+
+ '<h1 id="job-tit">'+distinct[i].title+'</h1>'+
    '<div class="card-content">'+
-     '<h1>This is a card</h1>'+
-     '<p>'+distinct[i].title+'</p>'+
-     '<p>Read More...</p>'+
+     ' <a id="apply-now" href="'+distinct[i].applylink+'"> Apply now! </a>'+
+     '<p></p>'+
+     '<h1 class="company">'+distinct[i].companyname+'</h1>'+
+
+     '<p class="jd">'+distinct[i].jd+'</p>'+
+     '<h2>Skills : '+distinct[i].skills+' </h2>'+
+     
      '<div class="card-meta">'+
        '<p class="card-date"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Posted '+distinct[i].created+'</span></p>'+
        '<ul class="card-social">'+

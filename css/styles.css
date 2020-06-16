@@ -10412,20 +10412,27 @@ form .row:first-child .floating-label-form-group {
   }
   
   .card .card-content {
+  
     position: relative;
     transform: skewY(0deg);
     padding: 10px;
     width: 100%;
-    height: 200px;
+    height: 250px;
   }
   
   .card .card-content h1 {
     font-size: 16px;
     color: #666767;
   }
+
+  .card .card-content h2 {
+    font-size: 15px;
+    color: #666767;
+  }
   
   .card .card-content p {
-    font-size: 12px;
+    font-size: 15px;
+  
     color: #888888;
     overflow: hidden;
     display: -webkit-box;
@@ -10491,3 +10498,17 @@ form .row:first-child .floating-label-form-group {
       margin-top: 35px;
     }
   }
+
+  #job-tit{
+    font: 1.5rem sans-serif;
+    padding: 0.7rem;
+  }
+
+  #apply-now{
+  margin-bottom: 0.5rem !important; 
+  color: black;
+  background-color: pink;
+  padding: 0.2rem;
+  font-weight: bold;
+}
+
