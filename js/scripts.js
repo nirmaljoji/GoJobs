@@ -3,6 +3,18 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
     */
+
+
+    
+
+   
+
+
+
+   
+
+
+
    var request = new XMLHttpRequest();
    request.open("GET", "/json/freshersworld.json", false);
    request.send(null);
@@ -10,14 +22,14 @@
      if ( request.readyState === 4 && request.status === 200 ) {
        var my_JSON_object = JSON.parse(request.responseText);
        y=my_JSON_object[0].title;
-       console.log(y);
+       
        var distinct = [];
+       
        console.log(my_JSON_object.length);
        for (var i = 0; i < my_JSON_object.length; i++){
         var a=my_JSON_object[i].location;
         var cities=a.split(',');
-        console.log(a);
-        console.log(cities);
+        
          for(var j=0; j<cities.length;j++){
            var trimmed=cities[j].trim();
           if (!distinct.includes(trimmed)){
@@ -25,14 +37,15 @@
           }
          }
        }
-      console.log(distinct);
-       
+      
+     
+
    var x ="", i;
    for (i=0; i<distinct.length; i++) {
      x = x +
-     
-     '<div class="col-md-6 col-lg-4 mb-5">'+
-     '<div id="go-to-new-page" class="container-raks">'+
+     '<a href="/card_view.html"'+
+     '<div class="col-md-6 col-lg-4 mb-5" onclick=>'+
+     '<div id='+distinct[i]+'  class="container-raks" onclick="reply_click(this.id)" >'+
       '<div class="portfolio-item mx-auto add-pad" data-toggle="modal" data-target="#portfolioModal1">'+
         '<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">'+
           '<div class="portfolio-item-caption-content text-center text-white">'+
@@ -44,14 +57,18 @@
          '</div>'+
         '</div>'+
       '</div>'+
-     '</div>';
+     '</div>'+
+     '</a>';
    }
-   document.getElementById("demo").innerHTML = x;
-      
+   document.getElementById("demo").innerHTML = x;      
      }
    }
 
 
+  //  document.getElementById("open-card").onclick(function(){
+  //    window.location.href='card_view.html';
+  //  })
+ 
 
     (function($) {
     "use strict"; // Start of use strict

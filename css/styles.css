@@ -10327,3 +10327,167 @@ form .row:first-child .floating-label-form-group {
     padding-left: 80px;
     padding-top: 60px;
   }
+
+  
+
+  @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+  body {
+    font-family: "Roboto", sans-serif;
+    background: #fbfbfc;
+  }
+  
+  a:active, a:focus, a:hover {
+    text-decoration: none;
+  }
+  
+  .container {
+    padding-top: 35px;
+  }
+  
+  .sidebar {
+    min-height: 100%;
+    padding: 35px;
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar h1 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #4F4F4F;
+    line-height: 24px;
+  }
+  
+  .sidebar h2 {
+    font-size: 12px;
+    color: #A6A6A6;
+    line-height: 16px;
+    margin-top: -8px;
+  }
+  
+  .card {
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4285f4+0,400090+100 */
+    background: #4285f4;
+      /* Old browsers */
+    background: -moz-linear-gradient(left, #4285f4 0%, #400090 100%);
+      /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #4285f4 0%, #400090 100%);
+      /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #4285f4 0%, #400090 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4285f4', endColorstr='#400090',GradientType=1 );
+      /* IE6-9 */;
+  }
+  
+  .card .card-image {
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .card .card-skew {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: white;
+    border-top: 1px solid #95989A;
+    transform: skewY(5deg);
+  }
+  
+  .card .card-content {
+    position: relative;
+    transform: skewY(0deg);
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card .card-content h1 {
+    font-size: 16px;
+    color: #666767;
+  }
+  
+  .card .card-content p {
+    font-size: 12px;
+    color: #888888;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .card .card-content .card-meta {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100%;
+    max-height: 20px;
+  }
+  
+  .card .card-content .card-meta .card-date {
+    float: left;
+    width: 50%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  
+  .card .card-content .card-meta .card-date span {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+  
+  .card .card-content .card-meta .card-social {
+    width: 40%;
+    float: left;
+    text-align: right;
+  }
+  
+  .card .card-content .card-meta .card-social li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .card .card-content .card-meta .card-social i {
+    font-size: 12px;
+  }
+  
+  .card .card-content .card-meta .card-social .twitter {
+    color: #00aced;
+  }
+  
+  .card .card-content .card-meta .card-social .pinterest {
+    color: #bd081c;
+  }
+  
+  .card .card-content .card-meta .card-social .facebook {
+    color: #3b5998;
+  }
+  
+  .author {
+    text-align: center;
+    margin-top: 35px;
+    color: rgba(20, 20, 20, 0.5);
+  }
+  
+  @media (max-width: 720px) {
+    .card {
+      margin-top: 35px;
+    }
+  }
